@@ -1,0 +1,90 @@
+Script run on Mon 12/11/2017 at 05:53 AM by alexandre008
+ 
+DELETE 0
+DELETE 0
+DELETE 0
+DELETE 0
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+UPDATE 1
+UPDATE 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+ cid |      cname       |      street      |  zip  |  city   | state 
+-----+------------------+------------------+-------+---------+-------
+   1 | Mathes Alexandre | 151 White Street | 06811 | Danbury | CT
+(1 row)
+
+UPDATE 1
+ cid |       cname       |      street      |  zip  |  city   | state 
+-----+-------------------+------------------+-------+---------+-------
+   1 | Matheus Alexandre | 151 White Street | 06811 | Danbury | CT
+(1 row)
+
+INSERT 0 1
+INSERT 0 1
+ resid | cid | rid | checkindate | checkoutdate 
+-------+-----+-----+-------------+--------------
+     1 |   2 |   2 | 2017-01-02  | 2017-02-01
+(1 row)
+
+INSERT 0 1
+ resid | cid | rid | checkindate | checkoutdate 
+-------+-----+-----+-------------+--------------
+     1 |   2 |   2 | 2017-01-02  | 2017-02-01
+(1 row)
+
+UPDATE 1
+ resid | cid | rid | checkindate | checkoutdate 
+-------+-----+-----+-------------+--------------
+     1 |   2 |   2 | 2017-01-02  | 2017-02-01
+(1 row)
+
+INSERT 0 1
+INSERT 0 1
+UPDATE 1
+INSERT 0 1
+INSERT 0 1
+DELETE 1
+ resid | cid | rid | checkindate | checkoutdate 
+-------+-----+-----+-------------+--------------
+(0 rows)
+
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+UPDATE 1
+ cid |   cname    |   street    |  zip  |  city   | state 
+-----+------------+-------------+-------+---------+-------
+   6 | Rick Morty | 51 Area Ave | 00000 | Nowhere | AR
+(1 row)
+
+DELETE 1
+ resid | cid | rid | checkindate | checkoutdate 
+-------+-----+-----+-------------+--------------
+(0 rows)
+
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+ resid | cid | rid | checkindate | checkoutdate 
+-------+-----+-----+-------------+--------------
+     9 |   9 |   7 | 2017-12-15  | 2018-01-02
+    10 |  10 |   7 | 2017-06-06  | 2017-07-04
+(2 rows)
+
+-------------------------------
+End of script

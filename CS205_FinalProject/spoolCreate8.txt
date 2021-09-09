@@ -1,0 +1,14 @@
+Script run on Wed 11/29/2017 at 04:48 AM by alexandre008
+ 
+CREATE TABLE
+Customer
+CREATE TABLE
+CustName
+CREATE TABLE
+Room
+CREATE TABLE
+Reservation
+CREATE TABLE
+ResDate
+----------------------------
+End of script

@@ -1,0 +1,15 @@
+Script run on Mon 12/11/2017 at 05:53 AM by alexandre008
+ 
+DROP TABLE
+Customer_t
+DROP TABLE
+Reservation_t
+DROP TABLE
+Room_t
+DROP TABLE
+Type_t
+Popularity_v
+DaysIn_v
+BillAmt_v
+----------------------------
+End of script

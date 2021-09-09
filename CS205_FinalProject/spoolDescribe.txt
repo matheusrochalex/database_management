@@ -1,0 +1,72 @@
+Script run on Mon 12/11/2017 at 05:53 AM by alexandre008
+ 
+                              Table "alexandre008.customer_t"
+ Column |         Type          |                        Modifiers                         
+--------+-----------------------+----------------------------------------------------------
+ cid    | integer               | not null default nextval('customer_t_cid_seq'::regclass)
+ cname  | character varying(30) | not null
+ street | character varying(50) | not null
+ zip    | character varying(10) | not null
+ city   | character varying(20) | not null
+ state  | character(2)          | not null
+Indexes:
+    "customer_t_pkey" PRIMARY KEY, btree (cid)
+Referenced by:
+    TABLE "reservation_t" CONSTRAINT "reservation_t_cid_fkey" FOREIGN KEY (cid) REFERENCES customer_t(cid)
+
+                           Table "alexandre008.reservation_t"
+    Column    |  Type   |                           Modifiers                           
+--------------+---------+---------------------------------------------------------------
+ resid        | integer | not null default nextval('reservation_t_resid_seq'::regclass)
+ cid          | integer | not null
+ rid          | integer | not null
+ checkindate  | date    | not null default ('now'::text)::date
+ checkoutdate | date    | not null default ('now'::text)::date
+Indexes:
+    "reservation_t_pkey" PRIMARY KEY, btree (resid)
+Foreign-key constraints:
+    "reservation_t_cid_fkey" FOREIGN KEY (cid) REFERENCES customer_t(cid)
+    "reservation_t_rid_fkey" FOREIGN KEY (rid) REFERENCES room_t(roomnum)
+
+         Table "alexandre008.room_t"
+  Column  |         Type          | Modifiers 
+----------+-----------------------+-----------
+ roomnum  | integer               | not null
+ roomtype | character varying(10) | not null
+Indexes:
+    "room_t_pkey" PRIMARY KEY, btree (roomnum)
+Referenced by:
+    TABLE "reservation_t" CONSTRAINT "reservation_t_rid_fkey" FOREIGN KEY (rid) REFERENCES room_t(roomnum)
+
+        Table "alexandre008.type_t"
+ Column |         Type          | Modifiers 
+--------+-----------------------+-----------
+ tname  | character varying(10) | not null
+ tprice | numeric(6,2)          | not null
+Indexes:
+    "type_t_pkey" PRIMARY KEY, btree (tname)
+
+       View "alexandre008.popularity_v"
+  Column  |         Type          | Modifiers 
+----------+-----------------------+-----------
+ rid      | integer               | 
+ roomtype | character varying(10) | 
+
+     View "alexandre008.daysin_v"
+ Column |       Type       | Modifiers 
+--------+------------------+-----------
+ resid  | integer          | 
+ days   | double precision | 
+
+        View "alexandre008.billamt_v"
+ Column  |         Type          | Modifiers 
+---------+-----------------------+-----------
+ resid   | integer               | 
+ roomnum | integer               | 
+ tname   | character varying(10) | 
+ tprice  | numeric(6,2)          | 
+ days    | double precision      | 
+ bill    | numeric(5,2)          | 
+
+----------------------------
+End of script

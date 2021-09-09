@@ -1,0 +1,18 @@
+Script run on Mon 12/11/2017 at 05:53 AM by alexandre008
+ 
+CREATE TABLE
+Customer_t
+CREATE TABLE
+Room_t
+CREATE TABLE
+Type_t
+CREATE TABLE
+Reservation_t
+CREATE VIEW
+Popularity_v
+CREATE VIEW
+DaysIn_v
+CREATE VIEW
+BillAmt_v
+----------------------------
+End of script

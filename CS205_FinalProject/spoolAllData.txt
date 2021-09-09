@@ -1,0 +1,89 @@
+Script run on Mon 12/11/2017 at 05:53 AM by alexandre008
+ 
+Customer_t:
+ cid |       cname       |      street      |  zip  |    city    | state 
+-----+-------------------+------------------+-------+------------+-------
+   1 | Matheus Alexandre | 151 White Street | 06811 | Danbury    | CT
+   2 | Lil Git           | 122 Tower Rd     | 06804 | Brookfield | CT
+   3 | Chutzpah Roc      | 103 Eagle St     | 06607 | Bridgeport | CT
+   4 | Sean Murthy       | 1800 Acapulco Dr | 94806 | San Pablo  | CA
+   5 | Water Bottle      | 7 Padanaram Rd   | 06811 | Danbury    | CT
+   6 | Rick Morty        | 51 Area Ave      | 00000 | Nowhere    | AR
+   7 | Naruto Uzumaki    | 1 Two Three Rd   | 12345 | Numbers    | OH
+   8 | Beyonce Knowles   | 350 5th Ave      | 10118 | New York   | NY
+   9 | Edgar F. Codd     | 14 Valerie Ln    | 06810 | Danbury    | CT
+  10 | Barack Obama      | 100 Passing St   | 94765 | Oakland    | CA
+(10 rows)
+
+Reservation_t:
+ resid | cid | rid | checkindate | checkoutdate 
+-------+-----+-----+-------------+--------------
+     2 |   1 |   1 | 2017-10-28  | 2017-11-12
+     1 |   2 |   2 | 2017-01-02  | 2017-02-01
+     5 |   5 |   6 | 2017-07-13  | 2017-08-11
+     6 |   6 |   5 | 2017-07-10  | 2017-07-25
+     7 |   7 |   5 | 2017-11-10  | 2017-12-09
+     8 |   8 |   4 | 2018-01-01  | 2018-01-31
+     9 |   9 |   7 | 2017-12-15  | 2018-01-02
+    10 |  10 |   7 | 2017-06-06  | 2017-07-04
+(8 rows)
+
+Room_t:
+ roomnum | roomtype 
+---------+----------
+       1 | Suite
+       2 | Double
+       3 | Single
+       4 | Single
+       5 | Double
+       6 | Suite
+       7 | Double
+(7 rows)
+
+Type_t:
+ tname  | tprice 
+--------+--------
+ Suite  |   7.00
+ Double |   3.00
+ Single |   5.00
+(3 rows)
+
+Popularity_v:
+ rid | roomtype 
+-----+----------
+   7 | Double
+   2 | Double
+   6 | Suite
+   1 | Suite
+   5 | Double
+   4 | Single
+(6 rows)
+
+DaysIn_v:
+ resid | days 
+-------+------
+     2 |   15
+     1 |   30
+     5 |   29
+     6 |   15
+     7 |   29
+     8 |   30
+     9 |   18
+    10 |   28
+(8 rows)
+
+BillAmt_v:
+ resid | roomnum | tname  | tprice | days |  bill  
+-------+---------+--------+--------+------+--------
+     1 |       2 | Double |   3.00 |   30 |  90.00
+     2 |       1 | Suite  |   7.00 |   15 | 105.00
+     5 |       6 | Suite  |   7.00 |   29 | 203.00
+     6 |       5 | Double |   3.00 |   15 |  45.00
+     7 |       5 | Double |   3.00 |   29 |  87.00
+     8 |       4 | Single |   5.00 |   30 | 150.00
+     9 |       7 | Double |   3.00 |   18 |  54.00
+    10 |       7 | Double |   3.00 |   28 |  84.00
+(8 rows)
+
+----------------------------
+End of script
